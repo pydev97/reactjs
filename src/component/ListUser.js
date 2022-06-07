@@ -10,10 +10,8 @@ const ListUser = (props) => {
     const rs = getUsers();
     rs.then((users) => setData(users.data));
   }, []);
-  const handleUpDate = () =>{
-
-  }
-  const handleDelete = () =>{}
+  const handleUpDate = () => {};
+  const handleDelete = () => {};
   return (
     <>
       <h2>Table With Rounded Borders</h2>
@@ -47,7 +45,7 @@ const ListUser = (props) => {
                 <td>{item.city}</td>
                 <td>{item.password}</td>
                 <td>
-                  <button onClick = {}>update</button>
+                  <button>update</button>
                 </td>
                 <td>
                   <button>delete</button>

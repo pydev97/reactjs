@@ -1,13 +1,15 @@
-export const counterState = {
-  counter: 0,
-};
+export const users = [];
 
-export const counterReducer = (state = counterState, action) => {
+export const usersReducer = (state = users, action) => {
   switch (action.type) {
-    case "increment":
+    case "add":
       return { ...state, counter: state.counter + action.payload };
-    case "decrement":
+    case "edit":
       return { ...state, counter: state.counter - 1 };
+    case "delete":
+      return { ...state, counter: state.counter - 1 };
+    case "getAllUsers":
+      return [...state, ...action.payload];
     default:
       return state;
   }
